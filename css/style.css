@@ -1,29 +1,52 @@
 body{
     padding: 0;
-    margin: 0;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .box{
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 300px;
+    max-height: 300px;
     border: 1px solid black;
-    width: 1000px;
-    height: 100px;
-    text-align: center;
-    margin: 0vh 1vw 0vh 1vw;
-    color: black;
+    margin: 2vh 25px 2vh 25px; 
+    display: inline-block;
+    
 }
 
-@media screen and (max-width: 999px) and (min-width: 400px){
+
+
+@media screen and (min-width: 376px) and (max-width: 1250px){
     .box{
-        max-width: 98vw;
-        margin: 0vh 1vw 0vh 1vw;
-        color: red;
+        min-width: 200px;
+        max-width: 200px;
+        min-height: 300px;
+        max-height: 300px;
+        display: block;
     }
+
+    .left{
+        margin-right: 100vw; /*this forces it to be a block element)*/
+        float: left;
+    }
+
+    .right{
+        float: right;
+    }
+
+    
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 375px){
     .box{
-        max-width: 300px;
-        margin: 0;
-        color:purple;
+        min-width: 60vw;
+        max-width: 60vw;
+        min-height: 40vh;
+        max-height: 40vh;
+        border: 1px solid black;
+        display: block;
+        margin: 3vh auto 3vh auto;
     }
+
 }
